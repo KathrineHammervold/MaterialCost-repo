@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 # Read Excel file and convert to JSON
 def get_house_parts():
-    df = pd.read_excel("house_parts.xlsx")
+    df = pd.read_excel("houseparts.xlsx")
     return df.to_dict(orient="records")
 
 @app.route("/get_house_parts", methods=["GET"])
