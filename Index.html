@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.5">
-    <title>House Material Cost Tracker</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>House Parts Data</title>
     <style>
         table { width: 100%; border-collapse: collapse; }
         th, td { border: 1px solid black; padding: 8px; text-align: left; }
@@ -11,55 +11,24 @@
     </style>
 </head>
 <body>
-    <h2>House Material Cost Tracker</h2>
-
-    <!-- Table for selecting materials for house parts -->
-    <table>
-        <tr>
-            <th>House Part</th>
-            <th>Material</th>
-            <th>Supplier</th>
-            <th>Cost per Unit ($)</th>
-            <th>Quantity</th>
-            <th>Total Cost ($)</th>
-        </tr>
-        <tr>
-            <td>Roof</td>
-            <td>
-                <select id="roofMaterial" onchange="updateCost('roof')">
-                    <option value="sink">AluZink</option>
-                    <option value="metal">Metal</option>
-                </select>
-            </td>
-            <td>
-                <select id="roofSupplier" onchange="updateCost('roof')">
-                    <option value="A">Supplier A</option>
-                    <option value="B">Supplier B</option>
-                </select>
-            </td>
-            <td id="roofCost">-</td>
-            <td><input type="number" id="roofQuantity" value="1" min="1" onchange="updateCost('roof')"></td>
-            <td id="roofTotal">-</td>
-        </tr>
+    <h1>House Parts Data</h1>
+    <button id="loadData">Load House Parts</button>
+    <table id="dataTable">
+        <thead>
+            <tr>
+                <th>Part</th>
+                <th>Material</th>
+                <th>Supplier</th>
+                <th>Cost per Unit ($)</th>
+                <th>Quantity</th>
+                <th>Total Cost ($)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Data will be populated here -->
+        </tbody>
     </table>
 
-    <script>
-        // Price list for materials from different suppliers
-        const materialPrices = {
-            shingles: { A: 50, B: 55 },
-            metal: { A: 70, B: 75 }
-        };
-
-        // Function to update the total cost when selections change
-        function updateCost(part) {
-            let material = document.getElementById(part + "Material").value;
-            let supplier = document.getElementById(part + "Supplier").value;
-            let quantity = document.getElementById(part + "Quantity").value;
-            
-            let unitCost = materialPrices[material][supplier];
-            document.getElementById(part + "Cost").innerText = unitCost;
-            document.getElementById(part + "Total").innerText = (unitCost * quantity).toFixed(2);
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 </html>
