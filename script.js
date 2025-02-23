@@ -2,6 +2,7 @@ document.getElementById('loadData').addEventListener('click', function() {
     fetch('http://127.0.0.1:5000/get_house_parts')
         .then(response => response.json())
         .then(data => {
+            console.log('Data received:', data);
             const tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
             tableBody.innerHTML = ''; // Clear existing data
 
