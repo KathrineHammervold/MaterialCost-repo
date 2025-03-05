@@ -1,4 +1,5 @@
 document.getElementById('loadData').addEventListener('click', function() {
+    // Call the REST API to get the different house parts, and the materials available for each part for each part
     fetch('http://127.0.0.1:5000/get_house_parts')
         .then(response => response.json())
         .then(data => {
@@ -12,6 +13,7 @@ document.getElementById('loadData').addEventListener('click', function() {
 
                 const materialCell = row.insertCell(1);
                 const materialSelect = document.createElement('select');
+                console.log('Item:', item);
                 materialSelect.innerHTML = `
                     <option value="${item['Material 1']}">${item['Material 1']}</option>
                     <option value="${item['Material 2']}">${item['Material 2']}</option>
