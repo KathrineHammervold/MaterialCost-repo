@@ -20,9 +20,9 @@ This is the structure of the JSON that has the quantities and type of unit
 This is the structure of the JSON that contains the different material choices for each house part
 [{"Material 1":"Shingles","Material 2":"Metal","Material 3":"Tiles","Part":"Roof"},{"Material 1":"Brick","Material 2":"Concrete","Material 3":"Wood","Part":"External Walls"},{"Material 1":"Concrete","Material 2":"Stone","Material 3":"Pavers","Part":"Foundation"}]
 
-When a particular material is selected, the Supplier column shows the available suppliers for the material and their cost per unit. The user can now select a supplier and the Cost per unit column is updated. 
-
 This is the structure of the JSON that is read from the Excel for supplieres
 [{"Material":"Shingles","Supplier":"ABC Shingles","Cost per unit":"10},
-{"Material":"Brick","Supplier":"ABC Bricks","Coste per unit":"20"}]
+{"Material":"Brick","Supplier":"ABC Bricks","Cost per unit":"20"}]
+WORKS
 
+When a particular material is selected, the Supplier column shows the available suppliers for the material and their cost per unit. The user can now select a supplier and the Cost per unit column is updated. 
