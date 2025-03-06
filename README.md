@@ -1,5 +1,5 @@
-# SkjellesvikMaterialCost-repo
-A web page that tracks the material and labor costs for the new house in Skjellesvik
+# MaterialCost-repo
+A web page that tracks the material and labor costs for a new farm house
 
 The web page calls a javascript function that in turn calls an API hosted on a Flask server
 
