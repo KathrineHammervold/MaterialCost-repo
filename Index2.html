@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Calculate Building cost for new farmhouse</title>
+    <title>Calculate Building Cost for New Farmhouse</title>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <style>
         body {
@@ -36,9 +36,10 @@
             padding: 12px;
             text-align: left;
             background-color: rgba(255, 255, 255, 0.8); /* Transparent white background */
+            margin-bottom: 20px;
         }
         th, td {
-            padding: 8px;
+            padding: 12px;
             text-align: left;
         }
         th {
@@ -53,26 +54,28 @@
             width: 200px;
             margin: 20px auto;
             padding: 10px;
-            background-color: #801218; /* Match the barn color */
+            background-color: #007bff; /* Change to blue color */
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             font-size: 16px;
-            transition: background-color 0.3s ease;
+            transition: background-color 0.3s ease, transform 0.3s ease;
         }
         button:hover {
-            background-color: #6b4a2c;
+            background-color: #0056b3;
+            transform: scale(1.05);
         }
         #totalCostDisplay {
             text-align: center;
-            font-size: 24px; /* Increase font size */
+            font-size: 28px; /* Increase font size */
             margin-top: 20px;
             color: #fff;
             background-color: #801218; /* Add background color */
-            padding: 10px 20px; /* Add padding */
+            padding: 15px 30px; /* Add padding */
             border-radius: 10px; /* Add border radius */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add box shadow */
+            font-weight: bold; /* Make text bold */
             transition: transform 0.3s ease; /* Add transition for animation */
         }
         @keyframes calculate {
@@ -100,7 +103,7 @@
     </style>
 </head>
 <body>
-    <h1>Calculate Building cost for new farmhouse</h1>
+    <h1>Calculate Building Cost for New Farmhouse</h1>
     <table id="dataTable">
         <thead>
             <tr>
