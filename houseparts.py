@@ -25,12 +25,7 @@ def get_supplier_and_cost_route():
     material = request.args.get('material')
     return get_supplier_and_cost(material)
 
-"""
-@app.route("/get_units_and_quantity", methods=["GET"])
-def get_units_and_quantity_route():
-    return get_units_and_quantity()
 
-"""
 # Read the sheet in the Excel file that contains parts and materials and convert to JSON
 def get_house_parts():
     try:
